@@ -9,7 +9,7 @@ namespace oopsExample_Staticconstructor
     internal class employee
     {
         //instance variables
-        int eno;
+        int eno;//non static variables
         string ename;
         int esal;
         //static variable
@@ -19,12 +19,12 @@ namespace oopsExample_Staticconstructor
             CompanyName = "Microsoft";
             //eno = 100;//Don't assign normal variables inside static constructor.it will throw compiletime error.
         }
-        public employee(int empno, string empname, int empsal)
-        {//non static  constructor is used to assign the data to instance variables
+        public employee(int empno, string empname, int empsal)//paramererized constructor.
+        {//non static or normal   constructor is used to assign the data to instance variables
             eno = empno;
             ename = empname;
             esal = empsal;
-           
+            //CompanyName = "tcs";
         }
         public void displayempinfo()
         {
